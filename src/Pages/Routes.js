@@ -8,6 +8,10 @@ import FilterName from "./FilterName";
 import SingleDetails from "./SingleDetails";
 import FilterDate from "./FilterDate";
 import UpdateProducts from "./UpdateProducts";
+import UpdateCustomer from "./UpdateCustomer";
+import PostProduct from "./PostProduct";
+import UpdateP from "./UpdateP";
+import UMainProduct from "./UMainProduct";
 
 export const routes = createBrowserRouter([
 {
@@ -17,7 +21,7 @@ export const routes = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/appUsers'),
+                loader: () => fetch('https://b-app-server.vercel.app/appUsers'),
             },
             {
                 path: '/login',
@@ -34,22 +38,43 @@ export const routes = createBrowserRouter([
             {
                 path: '/filterByName',
                 element:<FilterName></FilterName>,
-                loader: () => fetch('http://localhost:5000/customerInfo'),
+                loader: () => fetch('https://b-app-server.vercel.app/customerInfo'),
             },
             {
                 path: '/filterByDate',
                 element:<FilterDate></FilterDate>,
-                loader: () => fetch('http://localhost:5000/customerInfo'),
+                loader: () => fetch('https://b-app-server.vercel.app/customerInfo'),
             },
             {
                 path: '/singleDetails/:id',
                 element: <SingleDetails></SingleDetails>,
-                loader: async ({params}) =>  fetch(`http://localhost:5000/singleDetails/${params.id}`)
+                loader: async ({params}) =>  fetch(`https://b-app-server.vercel.app/singleDetails/${params.id}`)
             },
+            
             {
                 path: '/update',
                 element:<UpdateProducts></UpdateProducts>,
-                loader: () => fetch('http://localhost:5000/customerInfo'),
+                loader: () => fetch('https://b-app-server.vercel.app/productInfo'),
+            },
+
+            {
+                path: '/updateCustomer/:id',
+                element:<UpdateCustomer></UpdateCustomer>,  
+                loader: async ({params}) =>  fetch(`https://b-app-server.vercel.app/singleDetails/${params.id}`)
+            },
+            {
+                path: '/postProduct',
+                element:<PostProduct></PostProduct>, 
+            },
+            {
+                path: '/pInfo',
+                element:<UpdateP></UpdateP>,
+                loader: () => fetch('https://b-app-server.vercel.app/productInfo'),
+            },
+            {
+                path: '/updateProduct/:id',
+                element:<UMainProduct></UMainProduct>,  
+                loader: async ({params}) =>  fetch(`https://b-app-server.vercel.app/updateProduct/${params.id}`)
             },
         ]
         }          

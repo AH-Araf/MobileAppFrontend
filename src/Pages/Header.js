@@ -16,6 +16,7 @@ const Header = () => {
           <Link to='/login'>Login--</Link>
           <Link to='/register'>Register--</Link>
           <Link to='/sell'>SellHere--</Link>
+          <Link to='/postProduct'>AddProduct--</Link>
           <Link to='/filterByName'>FilterName--</Link>
           <Link to='/filterByDate'>FilterDate--</Link>
           <Link to='/update'>UpdateProducts--</Link>

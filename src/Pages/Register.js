@@ -52,7 +52,7 @@ const Register = () => {
             
         };
 
-        fetch('http://localhost:5000/appUsers', {
+        fetch('https://b-app-server.vercel.app/appUsers', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

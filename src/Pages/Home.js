@@ -8,13 +8,13 @@ const Home = () => {
 
     const [apply, setApply] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/appUserEmail?email=${user?.email}`)
+        fetch(`https://b-app-server.vercel.app/appUserEmail?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setApply(data))
     }, [user?.email])
 
     return (
-        <div>
+        <div><h1>Home</h1>
             {
 
 apply.map(x => <SingleHome

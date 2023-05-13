@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../contexts/AuthProvider';
 import { Link } from 'react-router-dom';
-// http://localhost:5000/appUserEmail?email=siam@gamil.com
+// https://b-app-server.vercel.app/appUserEmail?email=siam@gamil.com
 const SingleHome = ({x}) => {
     const { name, email, role, number} = x;
     

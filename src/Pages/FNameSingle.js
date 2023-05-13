@@ -7,10 +7,12 @@ const FNameSingle = ({a}) => {
     return (
         <div>
             
-            <p><Link to={`/singleDetails/${_id}`}><button className=''>{name}</button></Link></p>   
+            {/* <p><Link to={`/singleDetails/${_id}`}><button className=''>{name}</button></Link></p>    */}
+            <p><Link to={`/updateCustomer/${_id}`}><button className=''> {name}</button></Link></p> 
            
         </div>
     );
 };
+
 
 export default FNameSingle;

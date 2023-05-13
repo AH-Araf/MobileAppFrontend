@@ -8,7 +8,7 @@ const FDateSingle = ({a}) => {
         <div>
             <div className='filter-date'>
             
-            <p>Customer's Name: <Link to={`/singleDetails/${_id}`}><button className=''>{name}</button></Link></p>
+            <p>Customer's Name: <Link to={`/updateCustomer/${_id}`}><button className=''>{name}</button></Link></p>
             <p>Total Due: {due}</p>
             
            

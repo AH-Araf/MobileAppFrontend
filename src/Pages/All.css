@@ -3,3 +3,16 @@
     margin: 20px;
     padding: 10px;
 }
+.c-details{
+    margin: 10px;
+    font-size: large;
+}
+.btn-up{
+    margin: 10px;
+    border: 3px solid red;
+    padding: 0px 4px;
+    border-radius: 5px;
+}
+.form-up{
+    margin: 0px 10px;
+}
